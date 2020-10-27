@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$(".editar").click(function() {
+			
+			
+			var valor=$(this).parents("tr").find("td:first").text();
+			var url="formularioEditar?id="+valor;
+			window.location.href=url;
+		})
+
+	});
+</script>
+</head>
+<body>
+	hola mundo3
+	<table>
+		<tr>
+			<td>1</td>
+			<td>texto1</td>
+			<td><input class="editar" type="button" value="edita" /></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>texto2</td>
+			<td><input class="editar" type="button" value="edita" /></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>texto3</td>
+			<td><input class="editar" type="button" value="edita" /></td>
+		</tr>
+	</table>
+</body>
+</html>
